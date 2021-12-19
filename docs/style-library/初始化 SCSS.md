@@ -12,8 +12,24 @@ sidebar_position: 1
   height: $height;
 }
 
+@mixin fontFamily($font, $size, $color, $lineHeight:normal, $letterSpacing: normal, $textAlign: left) {
+  font-family: $font;
+  font-size: $size;
+  color: $color;
+  line-height: $lineHeight;
+  text-align: $textAlign;
+  letter-spacing: $letterSpacing;
+}
+
 @mixin bgColor($color) {
   background-color: $color;
+}
+
+@mixin borderRadius($topLeft, $topRight, $bottomRight, $bottomLeft) {
+  border-top-left-radius: $topLeft;
+  border-top-right-radius: $topRight;
+  border-bottom-right-radius: $bottomRight;
+  border-bottom-left-radius: $bottomLeft;
 }
 
 @mixin margin($top:0px, $left:0px, $bottom:0px, $right:0px) {
@@ -72,12 +88,7 @@ sidebar_position: 1
   z-index: $ZIndex;
 }
 
-@mixin fontFamily($font, $size, $color, $lineHeight) {
-  font-family: $font;
-  font-size: $size;
-  color: $color;
-  line-height: $lineHeight;
-}
+
 
 ```
 
