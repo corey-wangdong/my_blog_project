@@ -10,6 +10,10 @@ const navbarPluginsInfo = [
     name: '样式相关'
   },
   {
+    id: 'visual',
+    name: '可视化方案'
+  },
+  {
     id: 'deployed',
     docId: 'deployed',
     name: '构建部署'
