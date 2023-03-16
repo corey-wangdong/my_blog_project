@@ -25,7 +25,7 @@ const getNavBarPluginsItems = () => {
       docsPluginId: id,
       type: type || 'doc',
       docId: docId || 'index',
-      position: position || 'right',
+      position: position || 'left',
       label: name,
     }
   })

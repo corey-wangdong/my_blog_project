@@ -5,14 +5,14 @@ const { getPluginsContext, getNavBarPluginsItems } = require('./utils');
 // /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Corey',
-  tagline: '一名前端菜鸡😄',
+  tagline: '',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'facebook',
-  projectName: 'docusaurus',
+  // onBrokenLinks: 'throw',
+  // onBrokenMarkdownLinks: 'warn',
+  favicon: 'img/favicon.jpeg',
+  // organizationName: 'facebook',
+  // projectName: 'docusaurus',
 
   presets: [
     [
@@ -42,27 +42,22 @@ const config = {
     // /** @type {import('@docusaurus/preset-classic').ThemeConfig} */Z
     ({
       navbar: {
-        title: 'Corey',
+        title: '首页',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.png',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'react',
-            position: 'right',
-            label: 'React 笔记',
-          },
-
           ...getNavBarPluginsItems(),
-
           {
             to: '/blog',
             label: '博客',
             position: 'right'
           }
         ]
+      },
+      header: {
+        style: 'dark',
       },
       footer: {
         style: 'dark',
