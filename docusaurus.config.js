@@ -53,11 +53,6 @@ const config = {
             to: '/blog',
             label: '博客',
             position: 'right'
-          },
-          {
-            to: '/blog',
-            label: '博客',
-            position: 'right'
           }
         ]
       },

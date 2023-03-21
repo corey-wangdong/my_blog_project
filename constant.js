@@ -35,6 +35,12 @@ const navbarPluginsInfo = [
     docId: "my_views",
     name: "小小心得",
     position: 'right',
+  },
+  {
+    id: "brain_surge",
+    docId: "brain_surge",
+    name: "脑力飙升",
+    position: 'right',
   }
 ];
 
