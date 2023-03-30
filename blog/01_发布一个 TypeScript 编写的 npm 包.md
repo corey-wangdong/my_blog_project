@@ -83,7 +83,7 @@ npm i -D jest @types/jest ts-jest
 
 ## ts-jest包是Jest理解TypeScript所需要的。另一个选择是使用babel，这将需要更多的配置和额外的模块。我们就保持简洁，采用ts-jest。
 
-## 使用如下命令初始化jest配置文件：一直hui'che
+## 使用如下命令初始化jest配置文件：一直回车
 ```shell
 ./node_modules/.bin/jest --init
 ```
