@@ -499,3 +499,10 @@ module.exports = {
   }
 };
 ```
+
+# 添加路由
+
+## 1. 引入 react-router-dom
+```shell
+pnpm add react-router-dom
+```

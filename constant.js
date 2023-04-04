@@ -25,6 +25,11 @@ const navbarPluginsInfo = [
     name: "算法",
   },
   {
+    id: "6_other_frame",
+    docId: "other",
+    name: "其它框架",
+  },
+  {
     id: "interview",
     docId: "interview",
     name: "小小试题",
