@@ -1,11 +1,10 @@
----
-sidebar_position: 1
----
+# TypeScript 面试题
 
-# 面试题总结
+## 参考文章：
+- https://juejin.cn/post/6999985372440559624
+- https://developer.aliyun.com/article/1067624
 
-## TypeScript 
-> https://juejin.cn/post/6999985372440559624
+## 高频面试题
 
 1. 什么是TypeScript？及其优势是什么
 
