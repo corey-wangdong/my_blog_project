@@ -5,7 +5,7 @@ sidebar_position: 1
 # 1、React+Webpack（H5 template）
 
 ## 采用的技术
-> React18 + Webpack5 + TS + scss + less
+> React18 + Webpack5 + TS + scss + less + antd-mobile + reduxjs/toolkit + axios
 
 > 包管理工具：pnpm
 
@@ -505,4 +505,74 @@ module.exports = {
 ## 1. 引入 react-router-dom
 ```shell
 pnpm add react-router-dom
+```
+
+## 2. 创建 router 文件夹 -》routerList.ts 文件
+```ts
+export interface RouterObj {
+  path: string;
+  page: string;
+  children?: RouterObj[];
+}
+const list: RouterObj[] = [
+  {
+    path: '/',
+    page: 'home'
+  },
+  {
+    path: 'list-page',
+    page: 'list-page'
+  },
+];
+export default list;
+
+```
+
+## 在 router 文件夹里添加 index.tsx 文件
+```tsx
+import { lazy } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ROUTER_LIST from './routerList';
+
+const router = createBrowserRouter(
+  ROUTER_LIST.map(route => {
+    const Element = lazy(() => import(`../pages/${route.page}`));
+    return {
+      path: route.path,
+      element: <Element />
+    };
+  })
+);
+const Router = () => {
+  return <RouterProvider router={router} />;
+};
+export default Router;
+
+```
+
+## 修改 app.tsx 文件
+```tsx
+import { Suspense } from 'react';
+import { Provider } from 'react-redux';
+import Router from './router';
+import { persistor, store } from 'store';
+import { PersistGate } from 'redux-persist/integration/react';
+
+const App = () => {
+  console.log('Router---', Router);
+
+  return (
+   <Suspense
+      fallback={
+        <img
+          src="//up.boohee.cn/house/u/fe/skeleton/pixiu-1.jpg"
+          style={{ width: '100vw', height: '100vh' }}
+          alt=""
+        />
+      }>
+      <Router />
+    </Suspense>
+  )
+};
+export default App;
 ```
